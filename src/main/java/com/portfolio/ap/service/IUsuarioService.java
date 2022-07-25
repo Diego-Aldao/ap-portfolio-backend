@@ -6,10 +6,10 @@ import java.util.List;
 
 public interface IUsuarioService {
     
-    //Obtener usuarios   
+    //Obtener todos los usuarios   
     public List<Usuario> verUsuarios();
     
-    //Crear usuario
+    //Crear usuario de tipo Usuario
     public void crearUsuario(Usuario usuario);
     
     //Eliminar usuario
