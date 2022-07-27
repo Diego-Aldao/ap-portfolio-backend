@@ -1,5 +1,6 @@
 package com.portfolio.ap.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,7 +13,8 @@ import lombok.Setter;
 @Entity
 public class Usuario {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(updatable = false)
     private Long id;
     
     @NotNull
@@ -22,4 +24,27 @@ public class Usuario {
     private String apellido;
     
     private String img;
+    
+    private String titulo;
+    
+    private String descripcion;
+    
+    private String imgPortada;
+
+    public Usuario() {
+    }
+
+    public Usuario(Long id, String nombre, String apellido, String img, String titulo, String descripcion, String imgPortada) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.img = img;
+        this.titulo = titulo;
+        this.descripcion = descripcion;
+        this.imgPortada = imgPortada;
+    }
+    
+    
+    
+    
 }
