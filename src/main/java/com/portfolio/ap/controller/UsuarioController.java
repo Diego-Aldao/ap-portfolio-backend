@@ -39,20 +39,9 @@ public class UsuarioController {
         usuarioServ.eliminarUsuario(id);
     }
     
-    @PutMapping("/editar/{id}")
-    public Usuario editarUsuario(@PathVariable Long id,
-                              @RequestParam("nombre") String nombreEdit,
-                              @RequestParam("apellido") String apellidoEdit,
-                              @RequestParam("img") String imgEdit){
-    
-        Usuario usuario = usuarioServ.buscarUsuario(id);
-                
-        usuario.setNombre(nombreEdit);
-        usuario.setApellido(apellidoEdit);
-        usuario.setImg(imgEdit);
-        
-        usuarioServ.crearUsuario(usuario);
-        return usuario;
+    @PutMapping("/editar")
+    public void editarUsuario(@RequestBody Usuario usuario){
+        usuarioServ.editarUsuario(usuario);
     }
     
     @GetMapping("/id/{id}")
