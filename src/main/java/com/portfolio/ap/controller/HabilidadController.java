@@ -1,6 +1,5 @@
 package com.portfolio.ap.controller;
 
-import com.portfolio.ap.entity.Experiencia;
 import com.portfolio.ap.entity.Habilidad;
 import com.portfolio.ap.service.IHabilidadService;
 import java.util.List;
