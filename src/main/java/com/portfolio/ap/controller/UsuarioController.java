@@ -11,33 +11,35 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/usuario")
 @CrossOrigin(origins = "http://localhost:4200")
 public class UsuarioController {
     @Autowired
     private IUsuarioService usuarioServ;
     
-    @GetMapping("usuarios/ver")
+    @GetMapping("/ver")
     @ResponseBody
     public List<Usuario> verUsuarios() {
         return usuarioServ.verUsuarios();
     }
     
-    @PostMapping("usuarios/crear")
+    @PostMapping("/crear")
     public void crearUsuario(@RequestBody Usuario usuario){
         usuarioServ.crearUsuario(usuario);
     }
     
-    @DeleteMapping("usuarios/eliminar/{id}")
+    @DeleteMapping("/eliminar/{id}")
     public void eliminarUsuario(@PathVariable Long id){
         usuarioServ.eliminarUsuario(id);
     }
     
-    @PutMapping("usuarios/editar/{id}")
+    @PutMapping("/editar/{id}")
     public Usuario editarUsuario(@PathVariable Long id,
                               @RequestParam("nombre") String nombreEdit,
                               @RequestParam("apellido") String apellidoEdit,
@@ -53,7 +55,7 @@ public class UsuarioController {
         return usuario;
     }
     
-    @GetMapping("usuarios/id/{id}")
+    @GetMapping("/id/{id}")
     public Usuario buscarUsuario(@PathVariable Long id){
         return usuarioServ.buscarUsuario(id);
     }
