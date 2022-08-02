@@ -43,8 +43,5 @@ public class Educacion implements Serializable {
         this.linkEdu = linkEdu;
         this.imgEdu = imgEdu;
     }
-
-
-    
     
 }
