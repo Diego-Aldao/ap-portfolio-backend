@@ -16,7 +16,7 @@ public class Educacion implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idEdu;
     
-    private String InstitucionEdu;
+    private String institucionEdu;
     
     private String tituloEdu;
     
@@ -35,7 +35,7 @@ public class Educacion implements Serializable {
 
     public Educacion(Long idEdu, String InstitucionEdu, String tituloEdu, int fechaIniEdu, int fechaFinEdu, String descripcionEdu, String linkEdu, String imgEdu) {
         this.idEdu = idEdu;
-        this.InstitucionEdu = InstitucionEdu;
+        this.institucionEdu = institucionEdu;
         this.tituloEdu = tituloEdu;
         this.fechaIniEdu = fechaIniEdu;
         this.fechaFinEdu = fechaFinEdu;
