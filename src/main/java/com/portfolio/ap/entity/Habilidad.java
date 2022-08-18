@@ -18,14 +18,16 @@ public class Habilidad implements Serializable {
     private Long idHab;
     private String nombreHab;
     private int porcentajeHab;
+    private String descripcionHab;
 
     public Habilidad() {
     }
 
-    public Habilidad(Long idHab, String nombreHab, int porcentajeHab) {
+    public Habilidad(Long idHab, String nombreHab, int porcentajeHab, String descripcionHab) {
         this.idHab = idHab;
         this.nombreHab = nombreHab;
         this.porcentajeHab = porcentajeHab;
+        this.descripcionHab = descripcionHab;
     }
     
 }
