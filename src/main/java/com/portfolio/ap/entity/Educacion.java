@@ -20,9 +20,9 @@ public class Educacion implements Serializable {
     
     private String tituloEdu;
     
-    private int fechaIniEdu;
+    private String fechaIniEdu;
     
-    private int fechaFinEdu;
+    private String fechaFinEdu;
     
     private String descripcionEdu;
     
@@ -33,7 +33,7 @@ public class Educacion implements Serializable {
     public Educacion() {
     }
 
-    public Educacion(Long idEdu, String InstitucionEdu, String tituloEdu, int fechaIniEdu, int fechaFinEdu, String descripcionEdu, String linkEdu, String imgEdu) {
+    public Educacion(Long idEdu, String InstitucionEdu, String tituloEdu, String fechaIniEdu, String fechaFinEdu, String descripcionEdu, String linkEdu, String imgEdu) {
         this.idEdu = idEdu;
         this.institucionEdu = institucionEdu;
         this.tituloEdu = tituloEdu;

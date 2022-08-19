@@ -18,7 +18,7 @@ public class Proyecto implements Serializable {
     
     private String tituloPro;
     
-    private int fechaPro;
+    private String fechaPro;
     
     private String descripcionPro;
     
@@ -37,7 +37,7 @@ public class Proyecto implements Serializable {
     public Proyecto() {
     }
 
-    public Proyecto(Long idPro, String tituloPro, int fechaPro, String descripcionPro, String imgPro, String linkCode, String linkSitio, String mainTecno, String subTecnoA, String subTecnoB) {
+    public Proyecto(Long idPro, String tituloPro, String fechaPro, String descripcionPro, String imgPro, String linkCode, String linkSitio, String mainTecno, String subTecnoA, String subTecnoB) {
         this.idPro = idPro;
         this.tituloPro = tituloPro;
         this.fechaPro = fechaPro;

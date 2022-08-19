@@ -23,16 +23,16 @@ public class Experiencia implements Serializable {
     
     private String descripcionExp;
     
-    private int fechaIniExp;
+    private String fechaIniExp;
     
-    private int fechaFinExp;
+    private String fechaFinExp;
     
     private String imgExp;
 
     public Experiencia() {
     }
 
-    public Experiencia(Long idExp, String EmpresaExp, String tituloExp, String descripcionExp, int fechaIniExp, int fechaFinExp, String imgExp) {
+    public Experiencia(Long idExp, String EmpresaExp, String tituloExp, String descripcionExp, String fechaIniExp, String fechaFinExp, String imgExp) {
         this.idExp = idExp;
         this.empresaExp = empresaExp;
         this.tituloExp = tituloExp;
